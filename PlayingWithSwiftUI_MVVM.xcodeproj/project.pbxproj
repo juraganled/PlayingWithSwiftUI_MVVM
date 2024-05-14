@@ -13,6 +13,7 @@
 		9EB79BB62BF31E2E00B69A23 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EB79BB52BF31E2E00B69A23 /* Preview Assets.xcassets */; };
 		9EB79BBD2BF31E5300B69A23 /* Fruits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB79BBC2BF31E5300B69A23 /* Fruits.swift */; };
 		9EB79BBF2BF31F1300B69A23 /* FruitsProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB79BBE2BF31F1300B69A23 /* FruitsProcess.swift */; };
+		9EB79BC12BF328AA00B69A23 /* FruitCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB79BC02BF328AA00B69A23 /* FruitCount.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		9EB79BB52BF31E2E00B69A23 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9EB79BBC2BF31E5300B69A23 /* Fruits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruits.swift; sourceTree = "<group>"; };
 		9EB79BBE2BF31F1300B69A23 /* FruitsProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsProcess.swift; sourceTree = "<group>"; };
+		9EB79BC02BF328AA00B69A23 /* FruitCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitCount.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			children = (
 				9EB79BAE2BF31E2C00B69A23 /* PlayingWithSwiftUI_MVVMApp.swift */,
 				9EB79BB02BF31E2C00B69A23 /* ContentView.swift */,
+				9EB79BC02BF328AA00B69A23 /* FruitCount.swift */,
 				9EB79BBE2BF31F1300B69A23 /* FruitsProcess.swift */,
 				9EB79BBC2BF31E5300B69A23 /* Fruits.swift */,
 				9EB79BB22BF31E2E00B69A23 /* Assets.xcassets */,
@@ -146,6 +149,7 @@
 				9EB79BB12BF31E2C00B69A23 /* ContentView.swift in Sources */,
 				9EB79BAF2BF31E2C00B69A23 /* PlayingWithSwiftUI_MVVMApp.swift in Sources */,
 				9EB79BBF2BF31F1300B69A23 /* FruitsProcess.swift in Sources */,
+				9EB79BC12BF328AA00B69A23 /* FruitCount.swift in Sources */,
 				9EB79BBD2BF31E5300B69A23 /* Fruits.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

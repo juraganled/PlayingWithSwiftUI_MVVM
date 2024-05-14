@@ -16,21 +16,27 @@ struct ContentView: View {
                     Text("This is list of fruits")
                     List {
                         ForEach($fruitVM.fruitCollection) { fruitItem in
-                            HStack {
-                                VStack(alignment: .leading) {
-                                    Text(fruitItem.name.wrappedValue)
-                                        .font(.title2)
-                                    Text(fruitItem.description.wrappedValue)
-                                        .font(.subheadline)
-                                }
-                                Spacer()
-                                Text("\(fruitItem.count.wrappedValue)")
-                                    .padding(.trailing, 30)
-                                Button(action: {
-                                    fruitItem.favorite.wrappedValue.toggle()
-                                }, label: {
+                            
+                            NavigationLink {
+                                FruitCount(name: fruitItem.name, count: fruitItem.count)
+                            } label: {
+                                HStack {
+                                    VStack(alignment: .leading) {
+                                        Text(fruitItem.name.wrappedValue)
+                                            .font(.title2)
+                                        Text(fruitItem.description.wrappedValue)
+                                            .font(.subheadline)
+                                    }
+                                    Spacer()
+                                    Text("\(fruitItem.count.wrappedValue)")
+                                        .font(.title)
+                                        .padding(.trailing, 20)
                                     Image(systemName: fruitItem.favorite.wrappedValue ? "heart.fill" : "heart")
-                                })
+                                        .padding()
+                                        .onTapGesture {
+                                            fruitItem.favorite.wrappedValue.toggle()
+                                        }
+                                }
                             }
                         }
                     }
@@ -40,27 +46,31 @@ struct ContentView: View {
                 }
                 .navigationTitle("Fruit List")
                 VStack{
-                    List {
-                        ForEach($fruitVM.fruitCollection) { fruitItem in
-                            if fruitItem.favorite.wrappedValue == true {
+                    if fruitVM.fruitCollection.filter({$0.favorite == true}).count > 0 {
+                        List {
+                            ForEach($fruitVM.fruitCollection.filter({$0.favorite.wrappedValue == true})) { fruitItem in
                                 HStack {
                                     VStack(alignment: .leading) {
                                         Text(fruitItem.name.wrappedValue)
+                                            .font(.title2)
                                         Text(fruitItem.description.wrappedValue)
+                                            .font(.subheadline)
                                     }
                                     Spacer()
                                     Text("\(fruitItem.count.wrappedValue)")
                                 }
                             }
                         }
+                    } else {
+                        Text("You don't have any favorite")
                     }
                 }
                 .tabItem {
-                    Label("Favorit", systemImage: "heart.fill")
+                    Label("Favorite", systemImage: "heart.fill")
                 }
                 
             }
-
+            
         }
     }
 }
