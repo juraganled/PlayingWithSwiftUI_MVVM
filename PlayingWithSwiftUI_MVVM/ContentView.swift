@@ -22,10 +22,7 @@ struct ContentView: View {
                             } label: {
                                 HStack {
                                     VStack(alignment: .leading) {
-                                        Text(fruitItem.name.wrappedValue)
-                                            .font(.title2)
-                                        Text(fruitItem.description.wrappedValue)
-                                            .font(.subheadline)
+                                        CardView(name: fruitItem.name.wrappedValue, description: fruitItem.description.wrappedValue)
                                     }
                                     Spacer()
                                     Text("\(fruitItem.count.wrappedValue)")
@@ -50,12 +47,7 @@ struct ContentView: View {
                         List {
                             ForEach($fruitVM.fruitCollection.filter({$0.favorite.wrappedValue == true})) { fruitItem in
                                 HStack {
-                                    VStack(alignment: .leading) {
-                                        Text(fruitItem.name.wrappedValue)
-                                            .font(.title2)
-                                        Text(fruitItem.description.wrappedValue)
-                                            .font(.subheadline)
-                                    }
+                                    CardView(name: fruitItem.name.wrappedValue, description: fruitItem.description.wrappedValue)
                                     Spacer()
                                     Text("\(fruitItem.count.wrappedValue)")
                                 }

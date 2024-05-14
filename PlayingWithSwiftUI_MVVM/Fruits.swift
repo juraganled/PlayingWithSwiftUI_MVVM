@@ -20,3 +20,4 @@ var tangerine = Fruits(id: UUID(), name: "tangerine", description: "yellow, swee
 var apple = Fruits(id: UUID(), name: "apple", description: "red and sweet", favorite: false, count: 5)
 var durian = Fruits(id: UUID(), name: "durian", description: "strong smell", favorite: false, count: 2)
 var mangosteen = Fruits(id: UUID(), name: "mangosteen", description: "sweet and sticky", favorite: false, count: 4)
+var mango = Fruits(id: UUID(), name: "mango", description: "sour and yellow", favorite: false, count: 3)

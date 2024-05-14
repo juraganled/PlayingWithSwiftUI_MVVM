@@ -9,5 +9,5 @@ import Foundation
 
 @Observable
 class FruitsProcess {
-    var fruitCollection: [Fruits] = [apple, tangerine, durian, mangosteen]
+    var fruitCollection: [Fruits] = [apple, tangerine, durian, mangosteen, mango]
 }
